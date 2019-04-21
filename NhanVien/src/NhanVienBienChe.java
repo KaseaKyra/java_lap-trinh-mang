@@ -1,7 +1,6 @@
 public class NhanVienBienChe extends NhanVien {
-    double heSoLuong;
-    int soNam;
-    double luong;
+    private double heSoLuong;
+    private int soNam;
 
     NhanVienBienChe() {
     }
@@ -15,23 +14,19 @@ public class NhanVienBienChe extends NhanVien {
     @Override
     public void nhap() {
         super.nhap();
-        System.out.print("\nNhap vao he so luong: ");
+        System.out.print("\tNhap vao he so luong: ");
         heSoLuong = scanner.nextDouble();
-        System.out.print("\nNhap vao so nam cong tac: ");
+        System.out.print("\tNhap vao so nam cong tac: ");
         soNam = scanner.nextInt();
-        System.out.print("\nNhap vao luong: ");
-        luong = scanner.nextDouble();
     }
 
     @Override
     public void xuat() {
         super.xuat();
-        System.out.println(heSoLuong +" " + soNam + " ");
+        System.out.println("\t" + heSoLuong + "\t" + soNam + "\t");
     }
 
-    @Override
     public double tinhLuong() {
-//        super.tinhLuong();
         return heSoLuong * soNam * 1000000;
     }
 }

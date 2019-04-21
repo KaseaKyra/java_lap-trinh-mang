@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
-abstract public class NhanVien {
+public class NhanVien {
     protected String hoTen;
     protected int maNV;
     protected int maPhong;
-
 
     Scanner scanner = new Scanner(System.in);
 
@@ -19,17 +18,15 @@ abstract public class NhanVien {
     }
 
     public void nhap() {
-        System.out.println("\tho ten: ");
+        System.out.print("\tho ten: ");
         hoTen = scanner.nextLine();
-        System.out.println("\tma nhan vien: ");
+        System.out.print("\tma nhan vien: ");
         maNV = scanner.nextInt();
-        System.out.println("\tma phong: ");
+        System.out.print("\tma phong: ");
         maPhong = scanner.nextInt();
     }
 
     public void xuat() {
-        System.out.print(hoTen + " " + maNV + " " + maPhong + " ");
+        System.out.print("\t" + hoTen + "\t" + maNV + "\t" + maPhong);
     }
-
-    public double tinhLuong() = 0
 }
