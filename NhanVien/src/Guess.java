@@ -71,6 +71,7 @@ public class Guess {
             if (a[j] instanceof NhanVienBienChe) {
                 NhanVienBienChe nv = (NhanVienBienChe) a[j];
                 nv.xuat();
+                tongLuong += nv.tinhLuong();
             }
         }
 
@@ -80,20 +81,21 @@ public class Guess {
             if (a[j] instanceof NhanVienHopDong) {
                 NhanVienHopDong nv = (NhanVienHopDong) a[j];
                 nv.xuat();
+                tongLuong += nv.getLuongHD();
             }
         }
 
         // tinh tong luong
-        for (int j = 0; j < i; j++) {
-            if (a[j] instanceof NhanVienBienChe) {
-                NhanVienBienChe nv = (NhanVienBienChe) a[j];
-                tongLuong += nv.tinhLuong();
-            }
-            if (a[j] instanceof NhanVienHopDong) {
-                NhanVienHopDong nv = (NhanVienHopDong) a[j];
-                tongLuong += nv.getLuongHD();
-            }
-        }
+//        for (int j = 0; j < i; j++) {
+//            if (a[j] instanceof NhanVienBienChe) {
+//                NhanVienBienChe nv = (NhanVienBienChe) a[j];
+//
+//            }
+//            if (a[j] instanceof NhanVienHopDong) {
+//                NhanVienHopDong nv = (NhanVienHopDong) a[j];
+//
+//            }
+//        }
         System.out.println("Tong luong cua cac nhan vien la: " + tongLuong);
 
         // tim luong cao nhat
