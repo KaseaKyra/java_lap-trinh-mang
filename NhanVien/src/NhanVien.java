@@ -29,4 +29,6 @@ public class NhanVien {
     public void xuat() {
         System.out.print("\t" + hoTen + "\t" + maNV + "\t" + maPhong);
     }
+
+//    public abstract tinhLuong();
 }

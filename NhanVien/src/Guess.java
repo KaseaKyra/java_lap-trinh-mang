@@ -10,7 +10,6 @@
 //tính tổng lương
 //cho biết thông tin nhân viên hợp đông dài hạn có lương lớn nhất
 
-
 import java.util.Scanner;
 
 public class Guess {
@@ -36,8 +35,8 @@ public class Guess {
             loai = scanner.nextInt();
 
             if (loai == 1) {
-                a[i] = new NhanVien();
-                NhanVienBienChe nv = new NhanVienBienChe();
+                a[i] = new NhanVien();// a[i] = new NhanVienBienChe();
+                NhanVienBienChe nv = new NhanVienBienChe(); // a[i] = new NhanVienBienChe();
                 a[i] = nv;
                 a[i].nhap();
                 i++;
@@ -58,6 +57,18 @@ public class Guess {
                 luaChon = scanner.nextLine();
             }
         } while (i < n && luaChon.equalsIgnoreCase("y"));
+
+//        cách khác để nhập nhân viên
+/*        for (int j = 0; j< n; j++) {
+            System.out.println("nhap vao loai nhan vien: ");
+            int check = scanner.nextInt();
+            if (check == 1) {
+                a[i] = new NhanVienBienChe();
+            } else {
+                a[i] = new NhanVienHopDong();
+            }
+            a[i].nhap();
+        }*/
 
         // in ra ds nv chung
         System.out.println("********** Danh sach nhan vien **********");
